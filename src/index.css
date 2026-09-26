@@ -77,14 +77,29 @@ body {
   color: var(--color-ink);
 }
 
-/* subtle custom scrollbar, webkit only, purely cosmetic */
-::-webkit-scrollbar {
-  width: 10px;
+/* scrollbars hidden everywhere -- scrolling still works, just no visible
+   track/thumb chrome cluttering the scrapbook feel */
+* {
+  scrollbar-width: none; /* firefox */
 }
-::-webkit-scrollbar-track {
-  background: var(--color-bg);
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none; /* chrome, safari, edge */
 }
-::-webkit-scrollbar-thumb {
-  background: var(--color-lav);
-  border-radius: 999px;
+
+/* one-day-a-year birthday dressing (Oct 27, computed live -- see
+   isHerBirthdayToday() in content.ts, never hardcoded to a specific
+   year). deliberately understated: a warmer gold wash behind the page
+   and slightly brighter twinkle, not a confetti cannon. */
+.birthday-mode {
+  background: radial-gradient(
+    circle at 50% 0%,
+    color-mix(in srgb, var(--color-accent) 14%, transparent),
+    transparent 60%
+  );
+}
+.birthday-mode .steam,
+.birthday-mode [class*="twinkle"] {
+  filter: saturate(1.15);
 }

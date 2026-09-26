@@ -62,7 +62,7 @@ export default function AddressFeature({ id, label, rotate, accent, found, onOpe
             onClick={advance}
             className="rounded-full bg-[var(--color-panel)] px-4 py-2 text-sm font-medium text-[var(--color-lav-deep)] transition hover:bg-[var(--color-lav)]"
           >
-            {isMax ? "still no luck" : "try again"}
+            {isMax ? "case closed" : "next update"}
           </button>
         </div>
       </Modal>

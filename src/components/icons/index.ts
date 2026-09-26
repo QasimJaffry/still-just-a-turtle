@@ -10,6 +10,13 @@ import Bigini from "./Bigini";
 import Sparkle from "./Sparkle";
 import Tamagotchi from "./Tamagotchi";
 import Parcel from "./Parcel";
+import Ticket from "./Ticket";
+import Shield from "./Shield";
+import Spiral from "./Spiral";
+import Team from "./Team";
+import Claw from "./Claw";
+import Filmstrip from "./Filmstrip";
+import Burst from "./Burst";
 import type { IconProps } from "./types";
 import type { ComponentType } from "react";
 
@@ -26,6 +33,13 @@ export const iconRegistry: Record<string, ComponentType<IconProps>> = {
   sparkle: Sparkle,
   tamagotchi: Tamagotchi,
   parcel: Parcel,
+  ticket: Ticket,
+  shield: Shield,
+  spiral: Spiral,
+  team: Team,
+  claw: Claw,
+  filmstrip: Filmstrip,
+  burst: Burst,
 };
 
 export type IconKey = keyof typeof iconRegistry;
@@ -43,4 +57,11 @@ export {
   Sparkle,
   Tamagotchi,
   Parcel,
+  Ticket,
+  Shield,
+  Spiral,
+  Team,
+  Claw,
+  Filmstrip,
+  Burst,
 };
